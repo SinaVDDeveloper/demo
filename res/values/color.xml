@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="grey">#9B9B9B</color>
+    <color name="green">#78a22f</color>
+    <color name="setting_main_item_foreground">#FFFFFF</color>
+    <color name="setting_main_item_background">#DF9FFF</color>
+    <color name="setting_main_progress_background">#FFFFFFFF</color>
+    <color name="setting_main_progress_foreground">#DF9FFF</color>
+    <color name="setting_main_webview_background">#FFFFFF</color>
+    <color name="item_choose_default">#FFFFFF</color>
+    <color name="item_choose_pressed">#CFCFCF</color>
+    <color name="item_choose_selected">#63B8FF</color>
+    <color name="item_general_selected">#f3f3f3</color>
+    <color name="item_choose_unenable">#AAAAAA</color>
+    <color name="search_title_bar_color">#FF33B5E5</color>
+    <color name="program_recommend_checkbox_select">#cc8c8c8d</color>
+     <color name="program_recommend_checkbox_normal">#cc1f7eea</color>
+	<color name="program_details_listview_bg">#eaeaea</color>
+    <color name="pulltorefresh_progress_bar_color">#3FA3F8</color>
+
+    <!-- 颜色值 -->
+    
+    <color name="second_bg">#f1f1f1</color>
+    <!-- titlebar和底bar的背景色, 字体高亮颜色 -->
+    <color name="high_light_color">#1f7eea</color>
+    <color name="video_info_summary_color">#666666</color>
+    <color name="video_info_header_color">#858585</color>
+    <color name="divider_color">#d6d4d4</color>
+
+    <color name="c_1f7eea">#1f7eea</color>
+    <!-- 透明度50% -->
+    <color name="c_801f7eea">#1f7eea</color>
+    <color name="c_3878c1">#3878c1</color>
+    <color name="c_98d0ff">#98d0ff</color>
+    <color name="c_63b5fb">#63b5fb</color>
+    <color name="c_c80000">#c80000</color>
+    <color name="c_ffffff">#ffffff</color>
+    <color name="c_f1f1f1">#f1f1f1</color>
+    <color name="c_d6d4d4">#d6d4d4</color>
+    <color name="c_a5a5a5">#a5a5a5</color>
+    <color name="c_898a8b">#898a8b</color>
+    <color name="c_858585">#858585</color>
+    <color name="c_777777">#777777</color>
+    <color name="c_373737">#373737</color>
+    <color name="c_666666">#666666</color>
+    <color name="c_474646">#474646</color>
+    <color name="c_fefefe">#fefefe</color>
+    <color name="c_000000">#000000</color>
+    <color name="c_c0000000">#c0000000</color>
+    <color name="c_c6c6c6">#c6c6c6</color>
+    <color name="c_e5e2e2">#e5e2e2</color>
+    <color name="c_e6e6e6">#e6e6e6</color>
+    <color name="c_898e91">#898e91</color>
+    <color name="c_63b6fc">#63b5fb</color>
+    <color name="c_555555">#555555</color>
+    <color name="c_888888">#888888</color>
+    <color name="c_2a85eb">#2a85eb</color>
+    <color name="c_333333">#333333</color>
+    <color name="c_40ffffff">#40ffffff</color>
+    <color name="c_999999">#999999</color>
+    <color name="c_206bbf">#206bbf</color>
+    <color name="c_848484">#848484</color>
+    <color name="c_585858">#585858</color>
+    <color name="c_c0c0c0">#c0c0c0</color>
+    <color name="c_f53400">#f53400</color>
+    <color name="c_a9c5f5">#a9c5f5</color>
+    <color name="c_e8eae6">#e8eae6</color>
+    <color name="c_d7d7d7">#d7d7d7</color>
+    <color name="c_66000000">#66000000</color>
+    <color name="c_f5ffffff">#f5ffffff</color>
+     <color name="c_9bffffff">#9bffffff</color>
+      <color name="c_e51f7eea">#e51f7eea</color>
+    <color name="c_8c8c8d">#8c8c8d</color>
+    <color name="c_9b9b9d">#9b9b9d</color>
+    <color name="c_9c9c9c">#9c9c9c</color>
+    <color name="c_90bdf4">#90bdf4</color>
+    <color name="c_ff5d69">#ff5d69</color>
+    <color name="c_ff3c98">#ff3c98ff</color>
+    <color name="c_ff6a75">#ff6a75</color>
+    <color name="c_5daaff">#5daaff</color>
+    <color name="c_444444">#444444</color>
+    <color name="c_afafaf">#afafaf</color>
+	<color name="c_00000000">#00000000</color>
+	
+    <color name="channel_content_bg_color">#fefefe</color>    <color name="text_white_color">#FFFFFF</color>
+    
+    
+    <color name="video_item_bg_blue">#0078db</color>
+	<color name="video_item_text_color">#d1d1d1</color>
+	<color name="video_item_text_color_blue">#0078db</color>
+	
+	<!-- 播放进度选择颜色 -->
+	<color name="video_info_item_selected_bg">#3fa3f8</color>
+	<color name="video_info_item_played_bg">#ffffff</color><!-- #c1c1c1 -->
+	<color name="video_info_item_default_bg">#ffffff</color>
+	
+    <!-- 对话框列表dirver颜色 -->
+	<color name="listview_item_gray_line">#d9dbdf</color>
+	<!-- 默认文字颜色 -->
+    <color name="c_ff747474">#ff747474</color>
+    
+    <!-- 二维码扫描相关 -->
+    <color name="qrscan_corner_color">#2286F8</color>
+    <color name="qrscan_mask_color">#66222425</color>
+    <color name="qrscan_result_points_color">#c0ffbd21</color>
+    <color name="qrscan_tips_text_color">#f9f9f9</color>
+</resources>

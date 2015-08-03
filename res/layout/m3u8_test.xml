@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sina.playerdemo_v2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.sina.sinavideo.sdk.VDVideoView
+        android:id="@+id/vv1"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_alignParentTop="true"
+        android:background="#000000"
+        app:layerAttrs="@array/sv_videoview_m3u8_layers" >
+    </com.sina.sinavideo.sdk.VDVideoView>
+
+</RelativeLayout>

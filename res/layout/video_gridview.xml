@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sina.playerdemo_v2"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="#73000000"
+    android:orientation="vertical" >
+
+    <com.sina.sinavideo.sdk.widgets.playlist.VDVideoPlayGridView
+        android:id="@+id/play_grid_view"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:columnWidth="@dimen/controller_video_grid_item_width"
+        android:horizontalSpacing="@dimen/controller_video_adapter_tv_gridview_hor_space"
+        android:numColumns="3"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbars="none"
+        android:stretchMode="spacingWidth"
+        android:fadingEdge="none"
+        app:listItem="@layout/video_grid_item"
+        android:verticalSpacing="@dimen/controller_video_adapter_tv_gridview_ver_space" />
+
+
+</RelativeLayout>

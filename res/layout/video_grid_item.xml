@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/series_bg"
+    android:layout_width="@dimen/controller_video_grid_item_width"
+    android:layout_height="@dimen/controller_video_grid_item_height" >
+
+    <com.sina.sinavideo.sdk.widgets.playlist.VDVideoPlayListGridItemTextView
+        android:id="@+id/text"
+        android:layout_width="@dimen/controller_video_grid_item_width"
+        android:layout_height="@dimen/controller_video_grid_item_height"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textIsSelectable="false"
+        android:textSize="20sp" >
+    </com.sina.sinavideo.sdk.widgets.playlist.VDVideoPlayListGridItemTextView>
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sina.playerdemo_v2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:src="@drawable/item_track" />
+
+
+    <com.sina.sinavideo.sdk.widgets.playlist.VDVideoPlayListView
+        android:id="@+id/play_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:descendantFocusability="blocksDescendants"
+        android:scrollbars="none"
+        android:fadingEdge="none"
+        android:cacheColorHint="@android:color/transparent"
+        app:listItem="@layout/video_list_sport"
+        android:visibility="visible" >
+    </com.sina.sinavideo.sdk.widgets.playlist.VDVideoPlayListView>
+
+
+</RelativeLayout>

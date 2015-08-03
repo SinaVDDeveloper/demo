@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="sina_video_videoview_layers">
+        <item>@layout/control_layer</item>
+    </array>
+    <array name="sina_common_videoview_layers">
+        <item>@layout/common_control_layer</item>
+    </array>
+    <array name="sina_test_videoview_layers">
+        <item type="sina_test_videoview_layers1">@layout/common_control_layer</item>
+    </array>
+    <array name="sina_my_test_layer1">
+        <item>@layout/my_test_layer1</item>
+    </array>
+
+    <!-- 新的结构 -->
+    <array name="sina_simple_videoview_layers">
+        <item>@layout/simple_control_layer</item>
+    </array>
+    <array name="sv_videoview_layers">
+        <item>@array/sv_videoview_layer_controllayer</item>
+    </array>
+    <!-- 只横不竖 -->
+    <array name="only_horizon">
+        <item>@array/sv_videoview_layer_controllayer2</item>
+    </array>
+    <!-- 精简播放器例子，包含一个基本的播放器以及一个广告层 -->
+    <array name="sv_videoview_layers2">
+        <item>@array/simple_ui_layer_controllayer</item>
+        <item>@array/simple_ui_ad_controllayer</item>
+    </array>
+    <!-- 新浪视频 -->
+    <array name="sinavideo_layer">
+        <item>@array/sinavideo_layer_controllayer</item>
+    </array>
+    <array name="sinavideo_layer_controllayer">
+        <item>@layout/live_video_detail_control_layer</item>
+        <item>@layout/live_video_detail_control_layer_horizon</item>
+    </array>
+    <!-- 一组竖屏+横屏 -->
+    <array name="sv_videoview_layer_controllayer">
+        <item>@layout/control_layer</item>
+        <item>@layout/control_layer_horizon</item>
+    </array>
+    <!-- 一组竖屏+横屏 精简布局 -->
+    <array name="simple_ui_layer_controllayer">
+        <item>@layout/simple_ui_control_layer</item>
+        <item>@layout/simple_ui_control_layer_horizon</item>
+    </array>
+    <!-- 插入广告层，按照爱奇艺方式组织的 -->
+    <array name="simple_ui_ad_controllayer">
+        <item>@layout/simple_ui_ad_layer</item>
+        <item>@layout/simple_ui_ad_layer_horizon</item>
+    </array>
+    <!-- 只有横屏没有竖屏 -->
+    <array name="sv_videoview_layer_controllayer2">
+        <item>@null</item>
+        <item>@layout/control_layer_horizon</item>
+    </array>
+    <!-- 伪直播显示清晰度例子，包含一个基本的播放器以及一个广告层 -->
+    <array name="sv_videoview_m3u8_layers">
+        <item>@array/sv_m3u8_layer_controllayer</item>
+        <item>@array/simple_ui_ad_controllayer</item>
+    </array>
+    <array name="sv_m3u8_layer_controllayer">
+        <item>@layout/m3u8_ui_control_layer</item>
+        <item>@layout/m3u8_ui_control_layer_horizon</item>
+    </array>
+    <array name="sv_videoview_vid_vms_layers">
+        <item>@array/sv_vid_vms_controllayer</item>
+    </array>
+    <array name="sv_vid_vms_controllayer">
+        <item>@layout/vidvms_ui_control_layer</item>
+        <item>@layout/vidvms_ui_control_layer_horizon</item>
+    </array>
+
+    <!-- 广告倒计时的秒数图片 -->
+    <array name="ticker_img_list">
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+    </array>
+
+</resources>

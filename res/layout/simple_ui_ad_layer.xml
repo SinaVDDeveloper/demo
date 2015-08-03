@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sina.sinavideo.sdk.VDVideoADLayer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.sina.playerdemo_v2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 右上角的那个跳过广告 -->
+
+    <com.sina.sinavideo.sdk.container.VDVideoADStepoutContainer
+        android:id="@+id/ad1Stepout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp"
+        android:background="#000" >
+
+        <com.sina.sinavideo.sdk.widgets.VDVideoADTicker
+            android:id="@+id/ad1StepoutTicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/ad1StepoutText"
+            android:gravity="center_vertical"
+            app:tickerTextColor="#FF0000"
+            app:tickerTextSize="8sp" />
+
+        <TextView
+            android:id="@id/ad1StepoutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="跳过广告"
+            android:textColor="#FFFFFF" />
+    </com.sina.sinavideo.sdk.container.VDVideoADStepoutContainer>
+
+    <com.sina.sinavideo.sdk.widgets.VDVideoLoadingProgress
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/loading_iamge_progress"
+        android:indeterminateDuration="1000"
+        android:visibility="gone" />
+    <!-- 下方的播放条 -->
+
+    <com.sina.sinavideo.sdk.container.VDVideoADBottomRelativeContainer
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/play_ctrl_bottom_bg"
+        android:orientation="horizontal" >
+
+        <!-- 开始暂停按钮 -->
+
+        <com.sina.sinavideo.sdk.widgets.VDVideoPlayButton
+            android:id="@+id/ad1PlayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp" />
+
+        <!-- 音量按钮 -->
+
+        <com.sina.sinavideo.sdk.widgets.VDVideoADSoundButton
+            android:id="@+id/ad1SoundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/ad1PlayButton" />
+
+        <!-- 下方的那个了解更多 -->
+
+        <com.sina.sinavideo.sdk.container.VDVideoADGetMoreContainer
+            android:id="@+id/ad1GetMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/ad1FullScreen" >
+
+            <TextView
+                android:id="@+id/ad1GetMoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="了解更多"
+                android:textColor="#FFF" />
+        </com.sina.sinavideo.sdk.container.VDVideoADGetMoreContainer>
+
+        <com.sina.sinavideo.sdk.widgets.VDVideoFullScreenButton
+            android:id="@id/ad1FullScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+    </com.sina.sinavideo.sdk.container.VDVideoADBottomRelativeContainer>
+
+</com.sina.sinavideo.sdk.VDVideoADLayer>
