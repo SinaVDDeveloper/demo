@@ -8,7 +8,7 @@
         android:id="@+id/controlLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:gestureLevel="gestureLevelSingleTap|gestureLevelHorizonScroll|gestureLevelHorizonScrollSound|gestureLevelDoubleTap|gestureLevelHorizonScrollSound" />
+        app:gestureLevel="gestureLevelSingleTap|gestureLevelDoubleTap|gestureLevelHorizonScrollSound" />
 
     <com.sina.sinavideo.sdk.widgets.VDVideoBottomColorBar
         android:id="@+id/playerprogress1"

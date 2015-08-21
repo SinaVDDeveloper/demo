@@ -128,7 +128,7 @@
         android:layout_height="match_parent"
         android:layout_above="@id/container_bottom"
         android:layout_below="@id/container_top"
-        app:gestureLevel="gestureLevelSingleTap|gestureLevelHorizonScroll|gestureLevelVerticalScroll|gestureLevelDoubleTap" />
+        app:gestureLevel="gestureLevelSingleTap|gestureLevelDoubleTap" />
 
     <!-- 播放列表 -->
 
