@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <View
+        android:id="@+id/top_blank"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#aaaaaa" />
+
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_blank" >
+
+        <FrameLayout
+            android:id="@+id/video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_video_thumb"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/focusads_default"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/video_play_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_video_playicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/video_item_play_icon" />
+
+            <TextView
+                android:id="@+id/iv_video_playtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#88000000"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/bottom_blank"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/item_layout"
+        android:background="#aaaaaa" />
+
+</RelativeLayout>

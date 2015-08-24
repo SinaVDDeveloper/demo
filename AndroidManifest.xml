@@ -82,6 +82,10 @@
             android:name="com.sina.playerdemo_v2.activity.TestVidADVActivity"
             android:configChanges="orientation|screenSize|keyboardHidden" >
         </activity>
+        <activity
+            android:name="com.sina.playerdemo_v2.activity.TestListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden" >
+        </activity>
     </application>
 
 </manifest>

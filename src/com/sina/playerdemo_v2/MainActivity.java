@@ -10,6 +10,7 @@ import com.sina.playerdemo_v2.activity.OnlyHorizonActivity;
 import com.sina.playerdemo_v2.activity.SimpleTestActivity;
 import com.sina.playerdemo_v2.activity.SinaVideoActivity;
 import com.sina.playerdemo_v2.activity.TestAutoSaveActivity;
+import com.sina.playerdemo_v2.activity.TestListActivity;
 import com.sina.playerdemo_v2.activity.TestM3u8Activity;
 import com.sina.playerdemo_v2.activity.TestMultiADActivity;
 import com.sina.playerdemo_v2.activity.TestSimpleADActivity;
@@ -114,6 +115,18 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent(MainActivity.this,
 						TestWebviewActivity.class);
+				startActivity(intent);
+			}
+		});
+		
+		Button button9 = (Button) findViewById(R.id.button9);
+		button9.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(MainActivity.this,
+						TestListActivity.class);
 				startActivity(intent);
 			}
 		});
