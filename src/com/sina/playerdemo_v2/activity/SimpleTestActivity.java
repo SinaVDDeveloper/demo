@@ -1,32 +1,47 @@
 package com.sina.playerdemo_v2.activity;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.sina.playerdemo_v2.R;
+import com.sina.sinavideo.coreplayer.ISinaVideoView;
+import com.sina.sinavideo.coreplayer.splayer.GLSurfaceView;
+import com.sina.sinavideo.coreplayer.splayer.TextureVideoView;
+import com.sina.sinavideo.coreplayer.splayer.VideoView;
 import com.sina.sinavideo.coreplayer.util.LogS;
 import com.sina.sinavideo.sdk.VDVideoExtListeners.OnVDVideoFrameADListener;
 import com.sina.sinavideo.sdk.VDVideoExtListeners.OnVDVideoInsertADListener;
 import com.sina.sinavideo.sdk.VDVideoExtListeners.OnVDVideoPlaylistListener;
 import com.sina.sinavideo.sdk.VDVideoView;
+import com.sina.sinavideo.sdk.VDVideoViewController;
 import com.sina.sinavideo.sdk.data.VDVideoInfo;
 import com.sina.sinavideo.sdk.data.VDVideoListInfo;
 import com.sina.sinavideo.sdk.utils.VDVideoFullModeController;
 import com.sina.sinavideo.sdk.widgets.playlist.VDVideoPlayListView;
 
+@SuppressLint("NewApi")
 public class SimpleTestActivity extends Activity implements
 		OnVDVideoInsertADListener, OnVDVideoFrameADListener,
-		OnVDVideoPlaylistListener {
+		OnVDVideoPlaylistListener, OnClickListener {
 
 	private VDVideoView mVDVideoView = null;
 	private final static String TAG = "Test1Activity";
+	private ImageView imageView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +50,10 @@ public class SimpleTestActivity extends Activity implements
 		setContentView(R.layout.simple_test);
 		// adIV是广告部分的控件，这个需要产品侧开发人员自己处理了
 		ImageView adIV = (ImageView) findViewById(R.id.adFrameImageView);
+
+		findViewById(R.id.rotation_btn).setOnClickListener(this);
+		findViewById(R.id.capture_btn).setOnClickListener(this);
+		imageView = (ImageView) findViewById(R.id.image);
 		adIV.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -185,5 +204,79 @@ public class SimpleTestActivity extends Activity implements
 	public void onFrameADPrepared(VDVideoInfo info) {
 		// TODO Auto-generated method stub
 		Toast.makeText(this, "开始换图", Toast.LENGTH_LONG).show();
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.rotation_btn:
+			ISinaVideoView videoView = VDVideoViewController.getInstance(this)
+					.getVideoView();
+			if (videoView instanceof TextureVideoView) {
+				((TextureVideoView) videoView).animate().rotationBy(90.0f)
+						.setDuration(500).start();
+			} else {
+				Toast.makeText(getApplicationContext(), "不支持旋转",
+						Toast.LENGTH_SHORT).show();
+				// ((VideoView)videoView).animate().rotationBy(90.0f).setDuration(500).start();
+			}
+			break;
+		case R.id.capture_btn:
+			saveCurrentFrame();
+			break;
+
+		default:
+			break;
+		}
+
+	}
+
+	private void saveCurrentFrame() {
+		ISinaVideoView videoView = VDVideoViewController.getInstance(this)
+				.getVideoView();
+		if (videoView instanceof TextureVideoView) {
+			final Bitmap currentFrameBitmap = ((TextureVideoView) videoView)
+					.getBitmap();
+			if (currentFrameBitmap == null){
+				Toast.makeText(getApplicationContext(), "截屏失败",
+						Toast.LENGTH_SHORT).show();
+				return;
+			}
+			final File currentFrameFile = new File(
+					getExternalFilesDir("frames"), "frame"
+							+ System.currentTimeMillis() + ".jpg");
+			writeBitmapToFile(currentFrameBitmap, currentFrameFile);
+
+			imageView.setImageBitmap(currentFrameBitmap);
+			Toast.makeText(
+					this,
+					"Frame saved as " + currentFrameFile.getAbsolutePath()
+							+ ".", Toast.LENGTH_SHORT).show();
+		} else {
+			final Bitmap currentFrameBitmap = ((VideoView) videoView)
+					.getDrawingCache();
+			if (currentFrameBitmap == null) {
+				Toast.makeText(getApplicationContext(), "不支持截屏",
+						Toast.LENGTH_SHORT).show();
+				return;
+			}
+			final File currentFrameFile = new File(
+					getExternalFilesDir("frames"), "frame"
+							+ System.currentTimeMillis() + ".jpg");
+			writeBitmapToFile(currentFrameBitmap, currentFrameFile);
+
+			imageView.setImageBitmap(currentFrameBitmap);
+		}
+
+	}
+
+	private void writeBitmapToFile(final Bitmap bitmap, final File file) {
+		try {
+			FileOutputStream out = new FileOutputStream(file);
+			bitmap.compress(Bitmap.CompressFormat.JPEG, 90, out);
+			out.close();
+		} catch (final IOException e) {
+			Log.e(TAG, "Error writing bitmap to file.", e);
+		}
 	}
 }
